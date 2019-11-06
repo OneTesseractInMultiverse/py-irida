@@ -26,8 +26,6 @@ class GraphStructure(object):
         return node
 
 
-
-
 # We start by creating a regular redis connection
 connection = redis.Redis(host='localhost', port=6379)
 
