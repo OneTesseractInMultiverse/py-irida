@@ -1,1 +1,1 @@
-pytest --cov src/tests/
+pytest --cov-report xml --cov  src/tests/
