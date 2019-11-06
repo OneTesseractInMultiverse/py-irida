@@ -21,7 +21,7 @@ addons:
       secure: "X7RphgLUNsTq4lW++PmebzK4XHWmkaNurCugSiZmP9lNBYv1rfK52FPhSSPYsk72e3DD0SCnFab9N2dBdU8Y76UoZV3WfPb7baVQpD7B5OoPXKqycXwPdjaYbrk3/bQ8QxTamlcwH2mQiXuHTU1aoM09PqVn+0E7oIMxS49htn208aCQWaz/Lo8Vwbh5LXB4svj+fMMNdBgYhoAEsWURB08edkKL7vYy4KrIM12iqF2EACiz3g2xgm6/sxrDYysQMPdiYiCF1CtOkt04+Qrxcs9vdXDwCRT3gn2CiGCLQqndvBXURH36hznC+flyZLmlxcjSyUZithLZ+4Omg8nbbXsY/jKr8O2zdURl7J7joeoV54PkTtKq/T1We7a8No4gCWtXrZ0XxR9hXKbkK8ZCQD5r+XWSwSl2eOqDkvmbM2oe4Aaznz5f2Ih71gjrEPTgDxfEmapNvq1h+Oe+u3cyopKXPku2l4YyoAlExZnC/MFCgrT4AiOEcfTa0+anxKfUX6+ssXgob+kaOIvdOGYYtcx45fZ6SSH9Vg118thng14eWMSYzHyku5E/jwpwumsgyn6QZpmtCB9AdFpq3PsCPBfMCZqE4lD7U3Snfhpp472QFaten7bq37qcvyvzojp29enKcdgmhU2b39rMXeDJjGHE/dUNzKw9l7vq6NitiKY="
 
 script:
-  - pytest -v
+  - sh run-tests.sh
   - sonar-scanner
 
 
