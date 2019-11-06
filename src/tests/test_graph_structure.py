@@ -3,8 +3,11 @@ from irida.model import GraphStructure
 
 class PersonTestNode(GraphStructure):
 
-    def _collect_entity_properties(self):
+    def dict_ax(self):
         pass
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
 
 class TestGraphStructure:
@@ -13,12 +16,19 @@ class TestGraphStructure:
     # TEST CASE: LABEL NAME IS EXTRACTED FROM CHILD CLASS NAME
     # -------------------------------------------------------------------------
     def test_label_name_is_extracted_from_child_class_name(self):
-        # Prepare
         node = PersonTestNode()
         expected = "PersonTestNode"
-
-        # Act
         actual = node.label
-
-        # Assert
         assert expected == actual
+
+    def test_constructor_kwargs_map_into_object_attributes(self):
+        node = PersonTestNode(name="John", last_name="Doe", age=45)
+        expected = {
+            "name": "John",
+            "last_name": "Doe",
+            "age": 45
+        }
+        actual = node.dict
+        assert sorted(expected) == sorted(actual)
+
+
