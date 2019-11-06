@@ -11,7 +11,7 @@ class GraphStructure(object):
     __metaclass__ = ABCMeta
 
     def __init__(self, **kwargs):
-        self.__attach_properties(**kwargs)
+        self._attach_properties(**kwargs)
 
     # -------------------------------------------------------------------------
     # METHOD ATTACH PROPERTY
@@ -49,9 +49,10 @@ class GraphStructure(object):
     # -------------------------------------------------------------------------
     # METHOD ATTACH PROPERTY
     # -------------------------------------------------------------------------
-    def __attach_properties(self, **kwargs):
+    def _attach_properties(self, **kwargs) -> None:
         for key in kwargs.keys():
             setattr(self, key, kwargs.get(key))
+        return
 
 
 # We start by creating a regular redis connection
