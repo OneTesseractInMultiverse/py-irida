@@ -54,10 +54,18 @@ class GraphStructure(object):
             setattr(self, key, kwargs.get(key))
         return
 
+    def do_something(self, x, y):
+        result = 0
+        if x > y or y == x:
+            if x+y > 15:
+                if x*y < 0:
+                    result = '0' + self.label
+        return result
+
 
 # We start by creating a regular redis connection
 connection = redis.Redis(host='localhost', port=6379)
-
+password = 'my_super_secret'
 redis_graph = Graph('irida', connection)
 
 
